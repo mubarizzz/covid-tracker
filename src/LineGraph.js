@@ -73,7 +73,7 @@ function LineGraph({ casesType }) {
           return response.json();
         })
         .then((data) => {
-          let chartData = buildChartData(data, "cases");
+          let chartData = buildChartData(data, casesType);
           setData(chartData);
           console.log(chartData);
           // buildChart(chartData);
@@ -90,8 +90,8 @@ function LineGraph({ casesType }) {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(204, 16, 52, 0.5)",
-                borderColor: "#CC1034",
+                backgroundColor: "#7395ae",
+                borderColor: "#190061",
                 data: data,
               },
             ],
